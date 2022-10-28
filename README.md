@@ -7,10 +7,13 @@
 | ------------------ | ------- | ------------------------ |
 | email              | string  | null: false, unique:true |
 | encrypted_password | string  | null: false              |
-| name               | string  | null: false              |
-| profile            | text    | null: false              |
-| occupation         | text    | null: false              |
-| position           | text    | null: false              |
+| family_name        | string  | null: false              |
+| first_name         | string  | null: false              |
+| family_name_kana   | string  | null: false              |
+| first_name_kana    | string  | null: false              |
+| birth_year_id      | integer | null: false              |
+| birth_month_id     | integer | null: false              |
+| birth_day_id       | integer | null: false              |
 
 ### Association
 
@@ -23,18 +26,18 @@
 | ------------------ | ---------- | ------------------------------ |
 | item_name          | string     | null: false                    |
 | item_description   | text       | null: false                    |
-| category           | text       | null: false                    |
-| item_condition     | text       | null: false                    |
-| delivery_charge    | text       | null: false                    |
-| delivery_area      | text       | null: false                    |
-| delivery_date      | text       | null: false                    |
+| category_id        | integer    | null: false                    |
+| item_condition_id  | integer    | null: false                    |
+| delivery_charge_id | integer    | null: false                    |
+| delivery_area_id   | integer    | null: false                    |
+| delivery_date_id   | integer    | null: false                    |
 | price              | text       | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :purchase_records
+- has_one :purchase_record
 
 ## purchase_records テーブル
 
@@ -42,13 +45,12 @@
 | ------------------ | ---------- | ------------------------------ |
 | item               | references | null: false, foreign_key: true |
 | user               | references | null: false, foreign_key: true |
-| delivery_address   | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :item
-- has_one :addresses
+- has_one :delivery_address
 
 
 ## delivery_addresses テーブル
@@ -56,11 +58,11 @@
 | Columu             | Type    | Options                  |
 | ------------------ | ------- | ------------------------ |
 | post_code          | string  | null: false              |
-| prefectures        | string  | null: false              |
+| prefecture_id      | integer | null: false              |
 | municipalities     | string  | null: false              |
-| house_number       | text    | null: false              |
-| building           | text    |                          |
-| telephone_number   | text    | null: false              |
+| house_number       | string  | null: false              |
+| building           | string  | blank: true              |
+| telephone_number   | string  | null: false              |
 
 ### Association
 
