@@ -5,15 +5,14 @@
 
 | Columu             | Type    | Options                  |
 | ------------------ | ------- | ------------------------ |
+| nickname           | string  | null: false              |
 | email              | string  | null: false, unique:true |
 | encrypted_password | string  | null: false              |
 | family_name        | string  | null: false              |
 | first_name         | string  | null: false              |
 | family_name_kana   | string  | null: false              |
 | first_name_kana    | string  | null: false              |
-| birth_year_id      | integer | null: false              |
-| birth_month_id     | integer | null: false              |
-| birth_day_id       | integer | null: false              |
+| birthday_id        | date    | null: false              |
 
 ### Association
 
@@ -31,7 +30,7 @@
 | delivery_charge_id | integer    | null: false                    |
 | delivery_area_id   | integer    | null: false                    |
 | delivery_date_id   | integer    | null: false                    |
-| price              | text       | null: false                    |
+| price              | string     | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
@@ -55,14 +54,15 @@
 
 ## delivery_addresses テーブル
 
-| Columu             | Type    | Options                  |
-| ------------------ | ------- | ------------------------ |
-| post_code          | string  | null: false              |
-| prefecture_id      | integer | null: false              |
-| municipalities     | string  | null: false              |
-| house_number       | string  | null: false              |
-| building           | string  | blank: true              |
-| telephone_number   | string  | null: false              |
+| Columu             | Type       | Options                  |
+| ------------------ | ---------- | ------------------------ |
+| post_code          | string     | null: false              |
+| delivery_area_id   | integer    | null: false              |
+| municipalities     | string     | null: false              |
+| house_number       | string     | null: false              |
+| building           | string     |                          |
+| telephone_number   | string     | null: false              |
+| purchase_records   | references | null: false, foreign_key: true |
 
 ### Association
 
