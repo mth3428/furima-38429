@@ -1,13 +1,13 @@
 <mxfile host="65bd71144e">
     <diagram id="Wn2x8ryqymxWMqZHDRNn" name="ページ2">
-        <mxGraphModel dx="1176" dy="1507" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+        <mxGraphModel dx="490" dy="1421" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
             <root>
                 <mxCell id="A3Q_vjF1_IGxv7DRLVmZ-0"/>
                 <mxCell id="A3Q_vjF1_IGxv7DRLVmZ-1" parent="A3Q_vjF1_IGxv7DRLVmZ-0"/>
                 <mxCell id="-lCULytOmmqaOItVMBI4-0" value="usersテーブル" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=25;" vertex="1" parent="A3Q_vjF1_IGxv7DRLVmZ-1">
                     <mxGeometry y="-30" width="450" height="260" as="geometry"/>
                 </mxCell>
-                <mxCell id="-lCULytOmmqaOItVMBI4-1" value="nickname    (string型,    NOT NULL)&#10;email    (string型,    NOT NULL,    ユニーク制約)&#10;encrypted_password    (string型,    NOT NULL)&#10;family_name    (string型,    NOT NULL)&#10;first_name    (string型,    NOT NULL)&#10;family_name_kana    (string型,    NOT NULL)&#10;first_name_kana    (string型,    NOT NULL)&#10;birthday_id    (date型,    NOT NULL)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=20;" vertex="1" parent="-lCULytOmmqaOItVMBI4-0">
+                <mxCell id="-lCULytOmmqaOItVMBI4-1" value="nickname    (string型,    NOT NULL)&#10;email    (string型,    NOT NULL,    ユニーク制約)&#10;encrypted_password    (string型,    NOT NULL)&#10;family_name    (string型,    NOT NULL)&#10;first_name    (string型,    NOT NULL)&#10;family_name_kana    (string型,    NOT NULL)&#10;first_name_kana    (string型,    NOT NULL)&#10;birthday    (date型,    NOT NULL)&#10;" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=20;" vertex="1" parent="-lCULytOmmqaOItVMBI4-0">
                     <mxGeometry y="40" width="450" height="220" as="geometry"/>
                 </mxCell>
                 <mxCell id="-lCULytOmmqaOItVMBI4-2" style="edgeStyle=none;html=1;fontSize=17;startArrow=ERone;startFill=0;endArrow=ERone;endFill=0;startSize=24;endSize=24;strokeWidth=1;" edge="1" source="-lCULytOmmqaOItVMBI4-3" parent="A3Q_vjF1_IGxv7DRLVmZ-1">
