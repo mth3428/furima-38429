@@ -30,7 +30,7 @@
 | delivery_charge_id | integer    | null: false                    |
 | delivery_area_id   | integer    | null: false                    |
 | delivery_date_id   | integer    | null: false                    |
-| price              | string     | null: false                    |
+| price              | integer    | null: false                    |
 | user               | references | null: false, foreign_key: true |
 
 ### Association
@@ -62,7 +62,7 @@
 | house_number       | string     | null: false              |
 | building           | string     |                          |
 | telephone_number   | string     | null: false              |
-| purchase_records   | references | null: false, foreign_key: true |
+| purchase_record    | references | null: false, foreign_key: true |
 
 ### Association
 
