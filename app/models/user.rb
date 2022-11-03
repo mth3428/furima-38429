@@ -12,8 +12,8 @@ class User < ApplicationRecord
 
 
   validates :nickname, presence: true
-  validates :family_name, presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
-  validates :first_name, presence: true, format: {with: /\A[ぁ-んァ-ン一-龥]/ }
+  validates :family_name, presence: true, format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]/ }
+  validates :first_name, presence: true, format: {with: /\A[ぁ-んァ-ヶ一-龥々ー]/ }
   validates :family_name_kana, presence: true, format: { with: /\A[ァ-ヶー－]+\z/ }
   validates :first_name_kana, presence: true, format: { with: /\A[ァ-ヶー－]+\z/ }
   year_month_day = /\A\d{4}-\d{2}-\d{2}\z/
