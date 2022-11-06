@@ -20,7 +20,7 @@ class ItemsController < ApplicationController
   private
 
   def prototype_params
-    params.require(:item).permit(:item_name, :item_description, :category_id ).merge(user_id: current_user.id)
+    params.require(:item).permit(:item_name, :item_description, :category_id, :item_condition_id ).merge(user_id: current_user.id)
   end
 
   def message_params
