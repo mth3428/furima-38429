@@ -10,11 +10,15 @@ class Item < ApplicationRecord
   belongs_to :delivery_date
 
 
-  validates :item_name, :item_description, :price, presence: true
+  validates :item_name, :item_description, presence: true
 
   validates :category_id, numericality: { other_than: 1 } 
   validates :item_condition_id, numericality: { other_than: 1 } 
   validates :delivery_charge_id, numericality: { other_than: 1 }
   validates :delivery_area_id, numericality: { other_than: 1 }
   validates :delivery_date_id, numericality: { other_than: 1 }
+
+  with_options presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999 } do
+    validates :price
+  end
 end
