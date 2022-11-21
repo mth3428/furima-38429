@@ -69,6 +69,16 @@ RSpec.describe PurchaseRecordForm, type: :model do
         @purchase_record_form.valid?
         expect(@purchase_record_form.errors.full_messages).to include "Telephone number is invalid"
       end
+      it "配送先の電話番号が9桁以下では保存できない" do
+        @purchase_record_form.telephone_number = 123456789
+        @purchase_record_form.valid?
+        expect(@purchase_record_form.errors.full_messages).to include "Telephone number is invalid"
+      end
+      it "配送先の電話番号に半角数字以外が含まれている場合、保存できない" do
+        @purchase_record_form.telephone_number = "aaa"
+        @purchase_record_form.valid?
+        expect(@purchase_record_form.errors.full_messages).to include "Telephone number is invalid"
+      end
       it "トークンが空だと保存できない" do
         @purchase_record_form.token = nil
         @purchase_record_form.valid?
