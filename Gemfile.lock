@@ -61,6 +61,22 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    aws-eventstream (1.2.0)
+    aws-partitions (1.665.0)
+    aws-sdk-core (3.168.1)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.5)
+      jmespath (~> 1, >= 1.6.1)
+    aws-sdk-kms (1.59.0)
+      aws-sdk-core (~> 3, >= 3.165.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.117.1)
+      aws-sdk-core (~> 3, >= 3.165.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.4)
+    aws-sigv4 (1.5.2)
+      aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.13.0)
@@ -112,6 +128,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jmespath (1.6.1)
     json (2.6.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -147,7 +164,6 @@ GEM
       ast (~> 2.4.1)
     payjp (0.0.10)
       rest-client (~> 2.0)
-    pg (1.4.4)
     public_suffix (5.0.0)
     puma (3.12.6)
     racc (1.6.0)
@@ -299,6 +315,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_hash
+  aws-sdk-s3
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
@@ -312,7 +329,6 @@ DEPENDENCIES
   mini_magick
   mysql2 (>= 0.4.4)
   payjp
-  pg
   puma (~> 3.11)
   rails (~> 6.0.0)
   rspec-rails (~> 4.0.0)
